@@ -10,10 +10,10 @@ file_name_re = re.compile("\\d{2}")
 
 
 def main():
-    sub_dir = '5-huang-pi-zi-fen'
-    max_chp = 100
-    article_link = "https://www.guishuji.com/daomu/1/227.html"
-    i = 55
+    sub_dir = '8-wu-xia-guan-shan'
+    max_chp = 75
+    article_link = "https://www.guishuji.com/daomu/1/397.html"
+    i = 0
     while len(article_link) != 0:
         if i == max_chp + 1:
             break
@@ -28,7 +28,10 @@ def main():
         # print(content)
         title_split = content.find('h1', class_='article-title').text.split(' ')
         cp_code = '第' + cn2an.an2cn(str(i)) + '章'
-        cp_code_cn = cp_code + ' ' + title_split[1]
+        ti = 1
+        if i == 0:
+            ti = 0
+        cp_code_cn = cp_code + ' ' + title_split[ti]
         title = cp_code_cn
         # print(title)
         article = content.find('article', class_="article-content").text
