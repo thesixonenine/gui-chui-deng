@@ -10,10 +10,10 @@ file_name_re = re.compile("\\d{2}")
 
 
 def main():
-    sub_dir = '4-kun-lun-shen-gong'
-    max_chp = 45
-    article_link = "https://www.guishuji.com/daomu/1/127.html"
-    i = 1
+    sub_dir = '5-huang-pi-zi-fen'
+    max_chp = 100
+    article_link = "https://www.guishuji.com/daomu/1/227.html"
+    i = 55
     while len(article_link) != 0:
         if i == max_chp + 1:
             break
@@ -46,7 +46,7 @@ def main():
             article_link = 'https://www.guishuji.com' + content.find('a', attrs={"rel": "next"}).attrs['href']
         except:
             break
-        print(f"chp{i} done, next: chp{i+1} {article_link}")
+        print(f"chp{i} {title} done, next: chp{i+1} {article_link}")
         i = i + 1
 
 
