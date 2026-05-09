@@ -1,4 +1,5 @@
-# gui-chui-deng
+
+[鬼吹灯](https://thesixonenine.gitbook.io/gui-chui-deng)
 
 ## Build
 
